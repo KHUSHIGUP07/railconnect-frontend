@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "frontend",
   "version": "0.1.0",
   "proxy": "http://127.0.0.1:5000",
@@ -13,7 +12,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
-    "chat-app": "file:..",
     "framer-motion": "^4",
     "react": "^17.0.2",
     "react-chips": "^0.8.0",
@@ -34,48 +32,14 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-  "name": "chat-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
-  },
-  "keywords": [
-    "mern",
-    "chat-app"
-  ],
-  "author": "Piyush Agarwal",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
-    "dotenv": "^9.0.2",
-    "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.9",
-    "nodemon": "^2.0.7",
-    "socket.io": "^4.1.2"
->>>>>>> dfde84610f0c009769fcdb922000faa436d434cb
   }
 }
