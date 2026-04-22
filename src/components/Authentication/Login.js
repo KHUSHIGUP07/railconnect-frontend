@@ -1,3 +1,4 @@
+import API from "../config";
 import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
@@ -7,7 +8,7 @@ import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import { ChatState } from "../../Context/ChatProvider";
-import API from "../config";
+
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -42,7 +43,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "${API}/api/user/login",
+        `${API}/api/user/login`,
         { email, password },
         config
       );

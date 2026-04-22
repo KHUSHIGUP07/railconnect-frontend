@@ -1,3 +1,5 @@
+import API from "../config";
+
 import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
@@ -15,7 +17,6 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-import API from "../config";
 
 const ENDPOINT = "https://railconnect-iyua.onrender.com";
 var socket, selectedChatCompare;
@@ -106,7 +107,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
       try {
         const { data } = await axios.post(
-          "${API}/api/message",
+          `${API}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat._id,
