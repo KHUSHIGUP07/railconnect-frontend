@@ -1,3 +1,2 @@
-const API = process.env.REACT_APP_API_URL;
-
+const API = "https://railconnect-iyua.onrender.com";
 export default API;
