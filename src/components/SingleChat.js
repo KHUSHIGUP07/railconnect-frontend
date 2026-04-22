@@ -1,4 +1,4 @@
-import API from "../config";
+import API from "../../config";
 
 import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
