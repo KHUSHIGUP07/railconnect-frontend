@@ -15,6 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
+import API from "../config";
 
 const ENDPOINT = "https://railconnect-iyua.onrender.com";
 var socket, selectedChatCompare;
@@ -54,8 +55,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     window.open(url, "_blank");
 
     try {
-      await axios.post(
-        "/api/message",
+      await await axios.post(
+  `${API}/api/message`,
         {
           content: `📢 Meeting started! Join here 👉 ${url}`,
           chatId: selectedChat._id,
@@ -78,7 +79,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
     try {
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `${API}/api/message/${selectedChat._id}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -105,7 +106,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
       try {
         const { data } = await axios.post(
-          "/api/message",
+          "${API}/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

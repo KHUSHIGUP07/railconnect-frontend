@@ -6,6 +6,7 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import API from "../config";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -19,6 +20,7 @@ const Signup = () => {
   const [password, setPassword] = useState();
   const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
+  import API from "../config";
 
   const submitHandler = async () => {
     setPicLoading(true);
@@ -51,7 +53,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "${API}/api/user",
         {
           name,
           email,
