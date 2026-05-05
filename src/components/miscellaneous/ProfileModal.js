@@ -1,4 +1,5 @@
 import { ViewIcon } from "@chakra-ui/icons";
+import API from "../../config";
 import {
   Modal,
   ModalOverlay,
