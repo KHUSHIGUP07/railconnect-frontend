@@ -4,7 +4,12 @@ import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import "./styles.css";
 import { IconButton, Spinner, useToast } from "@chakra-ui/react";
-import { getSender, getSenderFull } from "../apiConfig/ChatLogics";
+import {
+  isSameSender,
+  isLastMessage,
+  isSameSenderMargin,
+  isSameUser,
+} from "../../config/ChatLogics";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ArrowBackIcon } from "@chakra-ui/icons";
